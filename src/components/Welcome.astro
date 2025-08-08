@@ -1,15 +1,796 @@
----
----
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Forum&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Psicologa | Lidia Andrade</title>
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body class="font-textNormal">
+    <!-- Primeira Seção -->
+    <div
+  class="flex flex-col gap-7 m-4 items-start p-4 redound border-t-0 rounded-lg shadow-xl border-amber-950 mt-2 mb-4"
+  style="background-image: url('src/assets/boas-vinda-bgs-min.jpg'); background-size: cover; background-position: center;"
+>
+  <!-- H2 centralizado -->
+  <h2 class="font-titulo md:text-5xl mt-7 w-full text-center  mb-2">Boas Vindas</h2>
+
+  <!-- Texto alinhado à direita -->
+  <div class="w-full md:w-1/2 h-auto text-lg flex flex-col ml-auto  p-4 rounded-lg">
+    <p class="mb-4 text-lg bg-gray-800/15 md:text-base mt-4">
+      Se você se sente <span class="font-bold">sobrecarregado(a)</span> emocionalmente e chegou até aqui é porque está disposto(a) a encarar <span class="font-bold">sentimentos, hábitos e relações</span> que podem estar causando sofrimento. Saiba que reconhecer isso e <span class="font-bold">buscar ajuda é um ato de coragem</span> e amor por si mesmo(a).
+    </p>
+    <p class="mb-4 text-lg bg-gray-800/15 md:text-base">
+      Na terapia online, ofereço um <span class="font-bold">espaço acolhedor e seguro,</span> com uma <span class="font-bold">escuta qualificada,</span> para acompanhar você no seu tempo e ritmo. Você não precisa enfrentar tudo sozinho(a), estou aqui para lhe ajudar. Juntos, podemos compreender sua história, ressignificar experiências e <span class="font-bold">construir caminhos mais saudáveis</span> para suas relações e bem-estar.
+    </p>
+    <a class="bg-amber-900/25 rounded-lg p-2 shadow-lg hover:underline text-xl md:mt-6 text-amber-800 w-fit" href="">
+      Fale Comigo
+    </a>
+  </div>
+</div>
+
+
+    <!-- Segunda Seção -->
+    <div
+      class="flex flex-col md:flex-row gap-7 p-4 border-t-[0.80px]  border-amber-950 mt-2 mb-4"
+    >
+      <!-- Imagem -->
+      <img
+        class="w-full mt-5 md:w-1/2 shadow-xl h-auto max-h-[70vh] object-cover object-center rounded-lg"
+        src="src/assets/HOME-SobreMim.jpg"
+        alt="Lídia Andrade"
+      />
+
+      <!-- Texto -->
+      <div class="w-full md:w-1/2 h-auto text-lg flex flex-col">
+        <h2 class="font-titulo md:text-5xl mt-7 mb-2">Sobre Mim</h2>
+        <p class="mb-4 text-lg md:text-base mt-4">
+          Sou Lídia Andrade, psicóloga clínica, e estou aqui para ajudar você a
+          <span class="font-bold"
+            >enfrentar desafios e construir uma vida mais plena e com
+            significado.</span
+          >
+          Nascida em Recife/PE e com uma infância e adolescência na França, trago
+          a riqueza de duas culturas para minha prática profissional.
+        </p>
+        <p class="mb-4 text-lg md:text-base">
+          Acredito que a terapia é um espaço de autoconhecimento e
+          transformação, onde você pode se expressar livremente, sem
+          julgamentos, e encontrar recursos para lidar com suas dificuldades.
+          Meu trabalho é pautado no acolhimento, na empatia e na ética
+          profissional, visando sempre o seu bem-estar e desenvolvimento
+          pessoal.
+        </p>
+        <a class="text-amber-800 font-bold hover:underline text-xl" href="/sob"
+          >Saiba Mais</a
+        >
+      </div>
+    </div>
+
+    <!-- Segunda Seção -->
+    <div
+      class="flex flex-col md:flex-row gap-4 p-4 border-t-[0.80px] border-amber-950 mt-4"
+    >
+      <!-- Texto -->
+      <div class="w-full md:w-1/2">
+        <h1 class="font-titulo text-5xl md:text-5xl mb-4">Terapia Online</h1>
+        <p class="mt-4 font-textNormal text-lg">
+          A terapia online é uma forma prática e acolhedora de cuidar da sua
+          saúde mental, especialmente se você
+          <span class="font-bold">busca conforto e flexibilidade.</span> Com ela,
+          você pode:
+        </p>
+        <ul class="mt-2 list-disc list-inside space-y-2 text-lg">
+          <li>Receber apoio psicológico de qualquer lugar;</li>
+          <li>Ajustar os horários das sessões à sua rotina;</li>
+          <li>Fazer terapia no aconchego do seu lar;</li>
+          <li>Garantir continuidade no tratamento, dentre outros fatores.</li>
+        </ul>
+        <h2 class="font-bold text-xl mt-3 mb-4">
+          Quer saber mais sobre a Terapia Online?
+        </h2>
+
+        <ul
+          class="mt-2 flex flex-nowrap text-center gap-2 md:flex-nowrap md:gap-5 md:mt-2"
+        >
+          <li
+            class="inline-block w-fit rounded hover:opacity-75 shadow-xl px-2 text-white bg-amber-900 max-w-[70vh]"
+          >
+            <a href="#" class="block px-2 py-1 transition-opacity duration-200"
+              >Para Adolescentes</a
+            >
+          </li>
+          <li
+            class="inline-block w-fit rounded hover:opacity-75 px-2 shadow-xl text-white bg-amber-900/80 max-w-[70vh]"
+          >
+            <a href="#" class="block px-2 py-1 transition-opacity duration-200"
+              >Para Adultos</a
+            >
+          </li>
+          <li
+            class="inline-block w-fit rounded hover:opacity-75 shadow-xl px-2 bg-amber-900/25 max-w-[70vh]"
+          >
+            <a href="#" class="block px-2 py-1 transition-opacity duration-200"
+              >Para Idosos</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Imagem -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img
+          class="w-full h-auto max-h-[500px] object-cover object-center rounded-lg shadow-lg"
+          src="src/assets/HOME-TerapiaOnline.jpg"
+          alt="Terapia Online"
+        />
+      </div>
+    </div>
+
+    <!-- Terceira Seção -->
+    <div class="border-t-[0.80px] border-amber-950 mt-4">
+      <h1 class="font-titulo text-5xl md:text-5xl mt-4 text-center">
+        Relatos dos Atendimentos
+      </h1>
+      <div
+        class="slider relative w-full max-w-4xl mx-auto bg-gray-100 p-6 rounded-lg overflow-hidden"
+      >
+        <div
+          class="slider-wrapper flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Slide 1 -->
+          <div class="slider-slide flex-shrink-0 w-full md:w-1/3 p-4">
+            <div class="bg-white p-6 rounded-lg text-center">
+              <img
+                src="src/assets/avataaars_Pai.svg"
+                alt="Lídia"
+                class="w-24 h-24 rounded-full mx-auto object-cover object-center mb-4"
+              />
+              <!-- Estrelas-->
+              <div class="flex justify-center mb-4">
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="slider-nome text-sm font-bold">
+                Pai de L.O.S, estudante, 12 anos
+              </h3>
+              <p class="slider-texto text-gray-600 mt-2">
+                “Obrigado! Amei a sua conexão e o excelente acompanhamento
+                psicológico da minha menina”.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-slide flex-shrink-0 w-full md:w-1/3 p-4">
+            <div class="bg-white p-6 rounded-lg text-center">
+              <img
+                src="src/assets/avataaars_GMA.svg"
+                alt="Lídia"
+                class="w-24 object-cover object-center h-24 rounded-full mx-auto mb-4"
+              />
+
+              <!-- Estrelas-->
+              <div class="flex justify-center mb-4">
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="slider-nome text-lg font-bold">G.M.A, 73 anos</h3>
+              <p class="slider-texto text-gray-600 mt-2">
+                “(...) Foi com sua paciência, dedicação e sobretudo o modo como
+                você me ouvia e entendia tudo direitinho. Obrigada por sua
+                dedicação e profissionalismo excelente!”
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-slide flex-shrink-0 w-full md:w-1/3 p-4">
+            <div class="bg-white p-6 rounded-lg text-center">
+              <img
+                src="src/assets/avataaars_JiC.svg"
+                alt="Lídia"
+                class="w-24 object-cover object-center h-24 rounded-full mx-auto mb-4"
+              />
+              <!-- Estrelas-->
+              <div class="flex justify-center mb-4">
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="slider-nome text-lg font-bold">J. I. C., 19 anos</h3>
+              <p class="slider-texto text-gray-600 mt-2"></p>
+            </div>
+          </div>
+          <div class="slider-slide flex-shrink-0 w-full md:w-1/3 p-4">
+            <div class="bg-white p-6 rounded-lg text-center">
+              <img
+                src="src/assets/avatar_Meg.svg"
+                alt="Lídia"
+                class="w-24 object-cover object-center h-24 rounded-full mx-auto mb-4"
+              />
+              <!-- Estrelas-->
+              <div class="flex justify-center mb-4">
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="slider-nome text-lg font-bold">
+                M.E.G, setor de marketing no banco, 28 anos
+              </h3>
+              <p class="slider-texto text-gray-600 mt-2"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button
+          class="slider-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 text-4xl text-gray-800 hover:text-gray-600"
+        >
+          &lt;
+        </button>
+        <button
+          class="slider-button-next absolute right-2 top-1/2 transform -translate-y-1/2 text-4xl text-gray-800 hover:text-gray-600"
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+
+    <!-- Quarta Seção -->
+    <div>
+      <div></div>
+    </div>
+
+    <!-- Quinta Seção (opção 3) -->
+
+    <div
+      class="border-t-[0.80px] my-5 px-4 border-amber-950 flex flex-col items-center"
+    >
+      <!-- Título centralizado -->
+      <h2 class="font-titulo my-4 text-3xl md:text-5xl text-center">
+        Perguntas Frequentes
+      </h2>
+
+      <!-- Conteúdo principal (imagem e lista) -->
+      <div class="w-full flex flex-col md:flex-row items-center">
+        <!-- Imagem -->
+        <div class="pt-4 w-full md:w-1/2 flex flex-col items-end">
+          <img
+            class="h-80 object-cover object-center rounded-lg mb-4 shadow-lg hidden md:block"
+            src="src/assets/HOME-PerguntasFrequentes.jpg"
+            alt="Terapia Online"
+          />
+        </div>
+
+        <!-- Lista de perguntas -->
+        <div class="w-full md:w-[82vh] flex flex-col justify-start items-start">
+          <ul class="space-y-4 w-full px-4">
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words whitespace-nowrap"
+                  >1. Como funciona a Terapia Online?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words md:whitespace-nowrap"
+                  >2. Como funciona a Terapia Online para Adolescente?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words whitespace-nowrap"
+                  >3. Terapia Online realmente funciona?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words whitespace-nowrap"
+                  >4. Aceita convênio?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words whitespace-nowrap"
+                  >5. Qual o valor da consulta?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="hover:border hover:rounded-md">
+              <a
+                href="/faq"
+                class="flex justify-between items-center hover:opacity-75 shadow-md bg-amber-900/25 px-4 py-2 rounded-md"
+              >
+                <span class="break-words whitespace-nowrap"
+                  >6. Como é feito o pagamento?</span
+                >
+                <svg
+                  class="w-5 h-5 text-amber-950"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 18l6-6-6-6"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- sexta Seção (opção 3) -->
+
+    <div
+      class="border-t-[0.80px] p-4 border-amber-950 flex flex-col items-center"
+    >
+      <h2 class="font-titulo items-start mb-4 text-5xl">BLOG</h2>
+      <div
+        class="divmaior flex flex-col items-center justify-center md:flex-row"
+      >
+        <div
+          class="divgrande flex flex-col items-center md:w-1/2  "
+        >
+            <img
+            class="mt-2 md:w-[70%] shadow-xl h-auto object-cover object-center rounded-lg hidden md:block"
+            src="src/assets/BLOG.jpg"
+            alt="Lídia Andrade"
+            />
+
+          <p class="w-[70%] mt-4">
+            Aqui você encontra textos psico-educacionais curtos sobre diversos
+            assuntos.
+            <br />
+            <span class="font-titulo text-xl"> Boa leitura!</span>
+          </p>
+          <div class="my-4 md:mt-8">
+            <a href="" class="text-amber-800 font-bold  md:hover:underline text-xl">
+              Veja todos os textos</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="divcoluna flex flex-col gap-4 md:w-[40%] max-h-[450px] overflow-y-auto"
+        >
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-scale-down object-center rounded-lg"
+              src="src/assets/BLOG_-_Ansiedade-removebg-preview.png"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              COMO SABER SE TENHO ANSIEDADE?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-right-top rounded-lg"
+              src="src/assets/stress-trab.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              COMO LIDAR COM O ESTRESSE DO TRABALHO?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-AfinaloqueeTDAH.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >3 minutos de leitura</span
+              ><br />
+              AFINAL, O QUE É TDAH?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-bottom rounded-lg"
+              src="src/assets/BLOG-Depressao.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              COMO SABER SE TENHO DEPRESSÃO?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-Burnout.jpg"
+              alt="Lídia Andrade"
+              style="filter: none;"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >3 minutos de leitura</span
+              ><br />
+              SERÁ QUE É BURNOUT?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-ComosabersemeufilhotemTDAH.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              COMO SABER SE MEU FILHO TEM TDAH?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-ComolidarcomumfilhoquetemTDAH.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >3 minutos de leitura</span
+              ><br />
+              COMO LIDAR COM UM FILHO QUE TEM TDAH?
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-solidaonoestrangeiro.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              Sozinho Em Terra Estranha
+            </h3>
+          </a>
+          <a
+            href="#"
+            class="flex gap-2 items-center w-full h-[150px] border-b border-gray-300 pb-2 hover:bg-gray-200"
+          >
+            <img
+              class="w-1/2 h-full shadow-xl object-cover object-center rounded-lg"
+              src="src/assets/BLOG-terceiraidadeeseusdesafios.jpg"
+              alt="Lídia Andrade"
+            />
+            <h3 class="w-1/2 hover:underline">
+              <span class="font-light text-amber-600 text-xs"
+          >2 minutos de leitura</span
+              ><br />
+              A TERCEIRA IDADE E SEUS DESAFIOS
+            </h3>
+          </a>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sliderWrapper = document.querySelector(".slider-wrapper");
+      const slides = document.querySelectorAll(".slider-slide");
+      const prevButton = document.querySelector(".slider-button-prev");
+      const nextButton = document.querySelector(".slider-button-next");
+      let currentIndex = 1;
+
+      // Clone first and last slides for seamless looping
+      const firstSlide = slides[0].cloneNode(true);
+      const lastSlide = slides[slides.length - 1].cloneNode(true);
+
+      sliderWrapper.appendChild(firstSlide);
+      sliderWrapper.insertBefore(lastSlide, slides[0]);
+
+      // Ajuste inicial para centralizar o primeiro slide real
+      const slideWidth = slides[0].offsetWidth;
+      sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        sliderWrapper.style.transition = "transform 0.5s ease-in-out";
+        sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentIndex++;
+        updateSlider();
+        if (currentIndex === slides.length) {
+          setTimeout(() => {
+            sliderWrapper.style.transition = "none";
+            currentIndex = 1;
+            sliderWrapper.style.transform = `translateX(-${slideWidth}px)`;
+          }, 500);
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex--;
+        updateSlider();
+        if (currentIndex === 0) {
+          setTimeout(() => {
+            sliderWrapper.style.transition = "none";
+            currentIndex = slides.length;
+            sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+          }, 500);
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        const slideWidth = slides[0].offsetWidth;
+        sliderWrapper.style.transition = "none";
+        sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"
+    ></script>
   </body>
 </html>

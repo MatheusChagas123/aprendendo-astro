@@ -1,0 +1,51 @@
+---
+import Navegation from '../components/navegation.astro';
+import Footer from '../components/footer.astro';
+
+// Obtém os posts para recomendar outros no final
+const posts = await Astro.glob('../posts/*.md');
+const currentSlug = Astro.url.pathname;
+const relatedPosts = posts.filter(post => post.url !== currentSlug).slice(0, 3); // Mostra 3 posts sugeridos
+
+const { frontmatter, content } = Astro.props;
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <Navegation />
+
+    <main class="max-w-3xl mx-auto p-4">
+      <article class="prose lg:prose-xl">
+        <!-- Exibe a imagem antes do texto -->
+        <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-full rounded-lg shadow-md" />
+
+        <h1 class="text-3xl font-bold">{frontmatter.title}</h1>
+        <p class="text-gray-600 text-sm">Publicado em {frontmatter.pubDate} por {frontmatter.author}</p>
+        {content}
+        <!-- Aqui renderiza o conteúdo do post -->
+        
+
+      </article>
+
+      <!-- Posts Relacionados -->
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-4">Leia também</h2>
+        <div class="flex flex-wrap gap-4">
+          {relatedPosts.map(post => (
+            <a href={post.url} class="w-64 flex flex-col items-center border rounded-lg shadow-lg p-4 hover:bg-gray-200 transition">
+              <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt} class="w-full h-32 object-cover rounded-lg"/>
+              <h3 class="text-lg font-semibold mt-2 text-center">{post.frontmatter.title}</h3>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

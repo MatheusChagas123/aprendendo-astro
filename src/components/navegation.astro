@@ -1,0 +1,142 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navMenuToggler = document.getElementById("navMenuToggler");
+    const navMenu = document.getElementById("navMenu");
+    const closeMenuButton = document.getElementById("closeMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    // Abrir menu mobile
+    navMenuToggler?.addEventListener("click", () => {
+      navMenu?.classList.remove("hidden");
+    });
+
+    // Fechar menu ao clicar no botão de fechar
+    closeMenuButton?.addEventListener("click", closeMenu);
+
+    function closeMenu() {
+      navMenu?.classList.add("hidden");
+    }
+
+    // Fechar menu ao clicar em um link (exceto dropdown no mobile)
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const isDropdownToggle = link.classList.contains("dropdown-toggle");
+        if (isDropdownToggle && window.innerWidth < 768) {
+          event.preventDefault(); // Impede comportamento padrão para dropdowns no mobile
+          const dropdownMenu = link.nextElementSibling;
+          dropdownMenu?.classList.toggle("hidden");
+        } else {
+          closeMenu();
+        }
+      });
+    });
+
+    // Dropdown hover para desktop
+    dropdownToggles.forEach((toggle) => {
+      const dropdownMenu = toggle.nextElementSibling;
+
+      toggle.addEventListener("mouseenter", () => {
+        if (window.innerWidth >= 768) {
+          dropdownMenu?.classList.remove("hidden");
+        }
+      });
+
+      toggle.parentElement?.addEventListener("mouseleave", () => {
+        if (window.innerWidth >= 768) {
+          dropdownMenu?.classList.add("hidden");
+        }
+      });
+    });
+  });
+</script>
+
+
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidia Andrade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet" />
+  </head>
+  <body class="pt-20">
+    <div class="border-b-[0.25px] border-b-amber-950 fixed top-0 left-0 w-full bg-teste-900 z-50">
+      <div class="container mx-auto flex items-center justify-between px-4 gap-6">
+        <!-- Logo -->
+        <div>
+          <div class="flex flex-col items-start w-auto">
+            <a href="/" class="mt-5 leading-6 text-3xl whitespace-nowrap shadow-md font-titulo">
+              Lídia Andrade <br />
+            </a>
+          </div>
+          <div><span class="font-light text-sm">Psicóloga Clínica</span></div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden m-5 font-titulo md:flex items-center space-x-6">
+          <a href="/" class="nav-link text-xl font-medium hover:text-amber-700">Home</a>
+          <div class="relative">
+            <button type="button" class="dropdown-toggle nav-link text-xl font-medium hover:text-amber-700 flex items-center gap-2">
+              Serviços
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="dropdown-menu hidden bg-teste-900 absolute top-full left-0 text-amber-950 border border-gray-200 shadow-lg rounded-lg w-48">
+              <a href="/tadol" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online <br> Adolescente</a>
+              <a href="#" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online <br> Adulto</a>
+              <a href="#" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online <br> Idoso</a>
+              
+            </div>
+          </div>
+          <a href="/sob" class="nav-link text-xl font-medium hover:text-amber-700">Sobre Mim</a>
+          <a href="/dep" class="nav-link text-xl font-medium hover:text-amber-700">Depoimentos</a>
+          <a href="/blog" class="nav-link text-xl font-medium hover:text-amber-700">Blog</a>
+          <a href="/con" class="nav-link text-xl font-medium hover:text-amber-700">Contato</a>
+          <a href="/faq" class="nav-link text-xl font-medium hover:text-amber-700">FAQ</a>
+        </nav>
+
+        <!-- Mobile menu icon -->
+        <div class="md:hidden flex items-center">
+          <button type="button" id="navMenuToggler">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="navMenu" class="hidden fixed inset-0 bg-teste-950/90 z-40 flex flex-col items-center justify-center space-y-6">
+        <button id="closeMenu" class="absolute top-5 right-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="/" class="nav-link text-lg font-medium hover:text-amber-700">Home</a>
+        <div class="relative">
+          <button type="button" class="dropdown-toggle nav-link text-lg font-medium hover:text-amber-700 flex items-center gap-2">
+            Serviços
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          <div class="dropdown-menu hidden absolute top-10 left-0 bg-teste-950 border border-gray-200 shadow-lg rounded-lg w-48 z-50">
+            <a href="/tadol" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online Adolescentes</a>
+            <a href="#" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online Adultos</a>
+            <a href="#" class="block px-4 py-2 text-sm hover: hover:text-amber-800">Terapia Online Idosos</a>
+            <a 
+          </div>
+        </div>
+        <a href="/sob" class="nav-link text-lg font-medium hover:text-amber-700">Sobre Mim</a>
+        <a href="/dep" class="nav-link text-lg font-medium hover:text-amber-700">Depoimentos</a>
+        <a href="/blog" class="nav-link text-lg font-medium hover:text-amber-700">Blog</a>
+        <a href="/con" class="nav-link text-lg font-medium hover:text-amber-700">Contato</a>
+        <a href="/faq" class="nav-link text-lg font-medium hover:text-amber-700">FAQ</a>
+      </nav>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,257 @@
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navMenuToggler = document.getElementById("navMenuToggler");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("overlay");
+    const closeMenuButton = document.getElementById("closeMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+    const dropdownMenuMobile = document.querySelector(".dropdown-menu-Mobile");
+
+    // Abrir menu mobile
+    navMenuToggler?.addEventListener("click", function () {
+      navMenu?.classList.remove("hidden");
+      overlay?.classList.remove("hidden");
+    });
+
+    // Fechar menu ao clicar no botão de fechar ou no overlay
+    closeMenuButton?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
+
+    function closeMenu() {
+      navMenu?.classList.add("hidden");
+      overlay?.classList.add("hidden");
+    }
+
+    // Fechar menu ao clicar em um link (exceto "Serviços" no mobile)
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        // Verificar se o link clicado é "Serviços" e se está no mobile
+        if (
+          link.classList.contains("dropdown-toggle") &&
+          window.innerWidth < 768
+        ) {
+          event.preventDefault(); // Impede o comportamento padrão
+          const dropdownMenu = link.nextElementSibling;
+          dropdownMenu.classList.toggle("hidden"); // Alterna a visibilidade do dropdown
+        } else {
+          closeMenu();
+        }
+      });
+    });
+
+    // Função para hover no desktop
+    dropdownToggles.forEach((toggle) => {
+      const dropdownMenu = toggle.nextElementSibling;
+
+      // Ações para hover (desktop)
+      toggle.addEventListener("mouseenter", function () {
+        if (window.innerWidth >= 768) {
+          dropdownMenu?.classList.remove("hidden");
+        }
+      });
+
+      toggle.parentElement.addEventListener("mouseleave", function () {
+        if (window.innerWidth >= 768) {
+          dropdownMenu?.classList.add("hidden");
+        }
+      });
+
+      // Ações para clique no mobile
+      toggle.addEventListener("click", function (event) {
+        if (window.innerWidth < 768) {
+          event.preventDefault(); // Impede a navegação padrão
+          dropdownMenuMobile.classList.toggle("hidden"); // Alterna a visibilidade do dropdown
+        }
+      });
+    });
+  });
+</script>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="text-teste-normal">Lídia Andrade</title>
+    <!-- Link para a fonte Reenie Beanie -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Forum&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      
+      .faq-question {
+        cursor: pointer;
+      }
+      .rotate-180 {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="pt-20 pb-4">
+    <div class="max-w-4xl mx-auto mt-4 px-4">
+      <h1 class="text-5xl font-titulo text-center mb-10">Perguntas Frequentes</h1>
+      <!-- Pergunta 1 -->
+      <div class="faq-item  border rounded-md mb-4">
+        <button class="faq-question w-full bg-amber-900/25  flex items-center justify-between p-4 text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo text-2xl">1. Como funciona a Terapia Online?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>É necessário um dispositivo com internet estável e um local privativo, onde você se sinta confortável.</p>
+          <ul class="list-outside  pl-5">
+            <li class="mt-2">              
+              <p class=""> <span class="font-bold">Primeiro momento:</span>  você entra em contato comigo via whatsapp e/ou ligação para: esclarecer suas dúvidas | me falar suas expectativas | combinarmos valores e horários e agendarmos a nossa primeira sessão.</p>
+            </li>
+            <li class="mt-4">
+              
+              <p class=""> <span class="font-bold">Primeira sessão:</span> envio um link do Google Meet para você e meu foco será em lhe acolher e entender as questões que você deseja trabalhar para que o tratamento caminhe no seu ritmo e com eficiência. Esse momento é também interessante para a gente criar uma conexão. </p>
+            </li>
+            <li class="mt-4">
+              
+              <p class=""> <span class="font-bold">Sessões:</span> ocorrem semanalmente, durante 45 minutos..</p>
+            </li>
+            <li class="mt-4">
+              
+              <p class=""> <span class="font-bold">Alta:</span> a alta ocorre quando você alcança os objetivos que estabelecemos juntos e se sente preparado(a) para lidar com seus desafios de forma autônoma.</p>
+            </li>
+          </ul>
+          <p class="mt-2 "><span class="font-bold">Lembre-se!</span>  A psicoterapia é um processo de mão-dupla. Eu não posso lhe oferecer soluções prontas de longo-prazo, mas posso guiar você na construção de suas próprias ferramentas para enfrentar as dificuldades e valorizar suas vitórias. Você não está sozinho(a) nesse caminho.</p>
+        </div>
+      </div>
+      
+      <!-- Pergunta 2 -->
+      <div class="faq-item border rounded-md mb-4">
+        <button class="faq-question w-full flex items-center justify-between p-4 bg-amber-900/25 rounded-md text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo text-2xl" >2. Como funciona a Terapia Online para Adolescente?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>É necessário um dispositivo com internet estável e um local privativo, onde ele(a) se sinta confortável. </p>
+          <ul class="list-outside  pl-5">
+            
+            <li class="mt-4">
+               
+              <p class=""> <span class="font-bold">Primeiro momento: </span>o(a) responsável entra em contato comigo via whatsapp e/ou ligação para: <br>
+                1. Esclarecer suas dúvidas; <br> 
+                2. Me falar de suas expectativas quanto ao tratamento psicológico do seu adolescente; <br>
+                3. Combinarmos valores e horários; <br>
+                4. Agendarmos a nossa primeira sessão, sem o adolescente. </p> <br>
+              
+            </li>
+            <li class="">
+              
+              <p class=""> <span class="font-bold">Primeira sessão:</span>  envio um link do Google Meet para você, responsável, e meu foco será em lhe acolher e entender as questões com as quais você se preocupa em relação ao seu adolescente para que o tratamento caminhe com eficiência. </p>
+            </li>
+            <li class="mt-4">
+               
+              <p class=""> <span class="font-bold">Segunda sessão:</span>  envio o link do Google Meet para você, responsável, para que encaminhe ao seu adolescente ou, se ele/ela tiver acima de 14 anos e acesso a dispositivos eletrônicos, envio o link diretamente a ele/ela. </p>
+            </li>
+            <li class="mt-4">
+                
+              <p class=""> <span class="font-bold">Sessões:</span> ocorrem semanalmente, durante 50 minutos e, quando necessário, seja da minha parte, seja da parte dos responsáveis, podemos marcar encontros extras, sem custo adicional, para conversarmos sobre a evolução dos atendimentos. </p>
+            </li>
+            <li class="mt-4">
+                
+              <p class=""> <span class="font-bold">Alta:</span> a alta ocorre quando você alcança os objetivos que estabelecemos juntos e se sente preparado(a) para lidar com seus desafios de forma autônoma.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Pergunta 3 -->
+      <div class="faq-item border rounded-md mb-4">
+        <button class="faq-question w-full flex items-center justify-between p-4 bg-amber-900/25 rounded-md text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo text-2xl">3. Terapia Online realmente funciona?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>Sim, <span class="font-bold"> a terapia online funciona é tão eficaz quanto a presencial.</span> Diversos estudos científicos comprovam que ela oferece resultados positivos, ajudando o paciente a lidar com questões emocionais e alcançar seus objetivos de forma igualmente acolhedora e transformadora. 
+            Além disso, por ser realizada em um ambiente confortável e familiar, muitas pessoas relatam se sentirem mais à vontade para se expressar, o que pode até potencializar os benefícios. O importante é que você tenha um espaço seguro para cuidar de si, independentemente do formato. Estou aqui para te acompanhar nesse processo.
+            </p>
+        </div>
+      </div>
+      
+      <!-- Pergunta 4 -->
+      <div class="faq-item border rounded-md mb-4">
+        <button class="faq-question w-full flex items-center justify-between p-4 bg-amber-900/25 rounded-md text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo text-2xl">4. Aceita convênio?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>Não aceito convênios, trabalho apenas no particular. Mas, <span class="font-bold"> entrego recibos via a Receita Saúde</span>  para que você possa solicitar reembolso ao seu plano de saúde.</p>
+        </div>
+      </div>
+      
+      <!-- Pergunta 5 -->
+      <div class="faq-item border rounded-md mb-4">
+        <button class="faq-question w-full flex items-center justify-between p-4 bg-amber-900/25 rounded-md text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo text-2xl">5. Qual o valor da consulta?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>Não posso divulgar os meus valores publicamente, devido a questões éticas. Mas, saiba que, no consultório particular, seja online, seja presencial, os <span class="font-bold"> valores sociais </span>do mercado estão entre 50 reais e 150 reais por sessão, e os <span class="font-bold">valores integrais</span> entre 150 reais e 600 reais por sessão. <br>
+            Você pode entrar em contato comigo para eu tirar todas as suas dúvidas.
+            </p>
+        </div>
+      </div>
+      
+      <!-- Pergunta 6 -->
+      <div class="faq-item  border rounded-md mb-4">
+        <button class=" faq-question w-full flex items-center justify-between p-4 bg-amber-900/25 rounded-md  text-left text-lg font-medium focus:outline-none">
+          <span class="font-titulo  text-2xl">6. Como é feito o pagamento?</span>
+          <svg class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer hidden p-4 bg-teste-900/25 border-t text-gray-700">
+          <p>O pagamento é feito via transferência bancária de sua preferência, por Pix ou por Paypal para os(as) brasileiros(as) que moram no exterior, seja no início do mês (antes das sessões), seja semanalmente após cada sessão. Em alguns casos, podemos negociar o pagamento para o final do mês. <br>
+            <span class="font-bold"> Atenção!</span> Para a primeira sessão, é necessário realizar o pagamento antes. </p>
+        </div>
+      </div>
+      
+      <div class="text-center p-4 my-8 hover:opacity-75 px-2 shadow-xl  bg-amber-900/25 mx-auto max-w-60 rounded-lg shadow-lg text-amber-800">
+        <a class="hover:underline text-xl" href="">
+          Tire suas dúvidas.
+        </a>
+      </div>
+    </div>
+    
+    <script>
+      const faqItems = document.querySelectorAll('.faq-item');
+    
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+    
+        question.addEventListener('click', () => {
+          const isExpanded = !answer.classList.contains('hidden');
+          
+          // Fecha todas as outras perguntas
+          faqItems.forEach(i => {
+            i.querySelector('.faq-answer').classList.add('hidden');
+            i.querySelector('.faq-icon').classList.remove('rotate-180');
+          });
+    
+          // Abre ou fecha a resposta clicada
+          if (!isExpanded) {
+            answer.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
